@@ -71,4 +71,5 @@ body {
 .answer-container ul li button {
     width: 200px;
     margin: 2px;
+    border-radius: 5px;
 }
