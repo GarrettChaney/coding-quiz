@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
     <title>Coding Quiz</title>
 </head>
 <body> 
 
-    <!--<header>
-        <div class="highscores">
-            <span>highscores</span>
+    <div class="container flex-column flex-between">
+        <div id="header" class="flex-between">
+            <a href="/highscores" id="highscores" class="">highscores</a>
+            <span id="timer" class="timer">75</span>
         </div>
-        <div class="timer">
-            <span>754</span>
+        <div id="contents" class="flex-column flex-center align-center text-center">
+            <h1>Ready Player One</h1>
+            <a href="" id="begin" class="btn">Begin</a>
         </div>
     </header>-->
 
@@ -31,11 +32,10 @@
         </div>
         <div class="answer-container">
             <ul>
-                <li><button id="begin">Begin!</button></li>
+                <li><button>Begin!</button></li>
             </ul>
         </div>
     </div>
-
 
     <script src="./assets/questions.js"></script>
     <script src="./assets/script.js"></script>
