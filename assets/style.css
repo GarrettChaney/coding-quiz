@@ -76,3 +76,9 @@
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,50,116,1) 35%, rgba(0,212,255,1) 100%);
 }
+
+.answer-container ul li button {
+    width: 200px;
+    margin: 2px;
+    border-radius: 5px;
+}
