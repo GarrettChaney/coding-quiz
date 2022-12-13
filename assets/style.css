@@ -37,6 +37,7 @@
 
 .flex-center {
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -68,13 +69,24 @@
     color: var(--color-secondary);
 }
 
-#question-container h1 {
+#question-container {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#question {
     font-size: 48px;
-    color: var(--color-secondary)
+    color: var(--color-secondary);
+    margin-bottom: 20px;
 }
 
 .hidden {
     display:none;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
 }
 
 .btn {
@@ -87,4 +99,6 @@
     border-radius: 5px;
     color: var(--color-secondary);
     background-color: var(--color-primary);
+    text-decoration: none;
+    list-style: none;
 }
