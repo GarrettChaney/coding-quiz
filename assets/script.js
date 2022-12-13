@@ -26,7 +26,7 @@ $("#highscores").on("click", function() {
 function selectNextQuestion() {
     console.log("selectNextQuestion fired")
     $("#question").text(questions[n].question)
-
+    $("#answer-buttons").empty();
     for (var i=0;i<4;i++) {
 
         var newButtons = $("<button>" + questions[n].choices[i] + "</button>");
@@ -43,21 +43,33 @@ function selectNextQuestion() {
 function selectChoice() {
     
     var userChoice = $(this).prop("value");
-    console.log(userChoice)
+    console.log(userChoice);
 
-    if (userChoice === questions[n].correctChoice && n === 5) {
-        console.log("correct, last question");
-        count++;
-        highscores();
-    } else if (userChoice != questions[n].correctChoice && n === 5) {
-        console.log("incorrect, last question");
-        highscores();
-    } else if (userChoice === questions[n].correctChoice && n < 5) {
-        console.log("correct, next question");
-        count++;
-        n++;
-        selectNextQuestion();
-        
+    if (userChoice === questions[n].correctChoice) {
+        if (n===3) {
+            console.log("Correct, last question. Count: " + count + " N= " +n);
+            count++;
+            n++;
+            callHighscores();
+        }
+        else {
+            n++;
+            count++;
+            console.log("Correct, next question please. Count: " + count + " N= " +n);
+            selectNextQuestion();
+        }
+    }
+    else if (userChoice != questions[n].correctChoice) {
+        if (n===3) {
+            console.log("incorrect, last question");
+            n++;
+            callHighscores();
+        }
+        else {
+            n++;
+            console.log("Incorrect, next question please. Count: " + count + " N= " +n);
+            selectNextQuestion();
+        }
     }
 }
 
@@ -69,8 +81,9 @@ function endTimer() {
 
 }
 
-function highscores() {
-
+function callHighscores() {
+    $("#question-container").hide();
+    $("#highscores-container").show();
 }
 
 const questions = [
@@ -87,20 +100,20 @@ const questions = [
     {
       question: "What is the correct syntax for referring to an external script called 'script.js'?",
       choices: {
-        0: "<script href='script.js'>",
-        1: "<script src='script.js'>",
-        2: "<link href='script.js'>",
-        3: "<script name='script.js'>",
+        0: "script href='script.js'",
+        1: "script src='script.js'",
+        2: "link href='script.js'",
+        3: "script name='script.js'",
       },
       correctChoice: "1"
     },
     {
       question: "How would you write 'Hello World' in the web console?",
       choices: {
-        0: "msg('Hello World')>",
-        1: "console('Hello World')>",
-        2: "console.log('Hello World')>",
-        3: "log('Hello World')>",
+        0: "msg('Hello World')",
+        1: "console('Hello World')",
+        2: "console.log('Hello World')",
+        3: "log('Hello World')",
       },
       correctChoice: "2"
     },

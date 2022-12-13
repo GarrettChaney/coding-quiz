@@ -64,10 +64,13 @@
     color: var(--color-secondary);
 }
 
-#start-container h1 {
+#start-container h1,
+#highscores-header {
     font-size: 60px;
     color: var(--color-secondary);
 }
+
+
 
 #question-container {
     margin-left: 20%;
