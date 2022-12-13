@@ -14,7 +14,7 @@
 
         <div id="header" class="flex-between">
             <a href="/highscores" id="highscores" class="">highscores</a>
-            <span id="timer" class="timer">75</span>
+            <span id="timer" class="timer hidden">75</span>
         </div>
 
         <div id="start-container" class="flex-column flex-center align-center text-center ">
@@ -24,11 +24,7 @@
 
         <div id="question-container" class="flex-column flex-center align-center text-center hidden">
             <div id="question">question</div>
-            <div id="answers" class="btn">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+            <div id="answer-buttons" class="flex-column flex-center">
             </div>
         </div>
 
@@ -36,7 +32,7 @@
             <span>created by: garrett chaney</span>
         </div>
 
-    <script src="./assets/questions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
