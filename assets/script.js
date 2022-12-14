@@ -5,7 +5,6 @@ var count = 0
 var totalTimer = 75;
 var highscores = [];
 
-// start button listener
 $("#start-button").on("click", function () {
     console.log("Start Button");
     $("#start-container").hide();
@@ -17,20 +16,13 @@ $("#start-button").on("click", function () {
     selectNextQuestion();
 });
 
-// highscores button listener
-
-$("#highscores").on("click", function() {
-
-})
-
 function selectNextQuestion() {
-    console.log("selectNextQuestion fired")
     $("#question").text(questions[n].question)
     $("#answer-buttons").empty();
     for (var i=0;i<4;i++) {
 
-        var newButtons = $("<button>" + questions[n].choices[i] + "</button>");
-        newButtons.attr("class", "btn");
+        var newButtons = $("<button>" + questions[n].choices[i] + "</button>");~
+        newButtons.attr("class", "bt n");
         $(newButtons).attr("value", i);
 
         $("#answer-buttons").append(newButtons);
@@ -38,12 +30,11 @@ function selectNextQuestion() {
         newButtons.on("click", selectChoice);
 
     }
-}
+};
 
 function selectChoice() {
     
     var userChoice = $(this).prop("value");
-    console.log(userChoice);
 
     if (userChoice === questions[n].correctChoice) {
         if (n===3) {
@@ -71,20 +62,20 @@ function selectChoice() {
             selectNextQuestion();
         }
     }
-}
+};
 
 function startTimer() {
 
-}
+};
 
 function endTimer() {
 
-}
+};
 
 function callHighscores() {
     $("#question-container").hide();
     $("#highscores-container").show();
-}
+};
 
 const questions = [
     {
