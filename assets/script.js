@@ -173,14 +173,12 @@ $("#highscores").on("click", function () {
 
   let highscores = localStorage.getItem("highScores");
   highscores = JSON.parse(highscores);
-  console.log(highscores);
-
-  for (let i = 0; i < highscores.length; i++) {
-    var item = $("<li>" + highscores[i] + "</li>");
-    item.attr("class", "color-text fs-3");
-    $("#highscores-list").append(item);
-  };
-})
+  if (highscores != null) {
+    for (let i = 0; i < highscores.length; i++) {
+      var item = $("<li>" + highscores[i] + "</li>");
+      item.attr("class", "color-text fs-3");
+      $("#highscores-list").append(item);
+  };}})
 
 // Timer function for the game. Fires on game start, finishes when time runs out or <= 0
 function startTimer() {
