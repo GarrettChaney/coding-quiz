@@ -1,107 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
-
-:root {
-    /*Variable Setup*/
-    --color-primary:#6F417D;
-    --color-secondary:#BBBB62;
-    --color-accent:#E1E1CA;
-    --color-background:#211424;
-
-    /*Global declarations*/
-    background-color: var(--color-background);
-
-
-}
-
 * {
-    margin: 0px;
-    padding: 0px;
     list-style: none;
-    text-decoration: none;
-    font-family: 'Anonymous Pro', monospace;
 }
 
-.container {
-    height: 100vh;
+.bg-background {
+    background-color: #211424;
 }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
+.color-secondary {
+    background-color:#BBBB62;
 }
 
-.flex-between {
-    display: flex;
-    justify-content: space-between;
+.color-primary {
+    background-color:#6F417D;
 }
 
-.flex-center {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+.color-text {
+    color:#BBBB62;
 }
 
-.text-center {
-    text-align: center;
+.color-accent {
+    color: #E1E1CA;
 }
 
-.align-center {
-    align-content: center;
-}
-
-#header {
-    margin: 5px 10px;
-}
-
-#highscores, #timer {
-    font-size: 36px;
-    color: var(--color-secondary);
-}
-
-#start-container {
-    color: var(--color-secondary);
-}
-
-#start-container h1,
-#highscores-header {
+.font-large {
     font-size: 60px;
-    color: var(--color-secondary);
 }
 
-
-
-#question-container {
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-#question {
-    font-size: 48px;
-    color: var(--color-secondary);
-    margin-bottom: 20px;
+.btn-purple {
+    background-color: #6F417D;
 }
 
 .hidden {
-    display:none;
-}
-
-li {
-    text-decoration: none;
-    list-style: none;
-}
-
-.btn {
-    font-size: 30px;
-    width: 500px;
-    height: 75px;
-    padding: 5px 10px 5px 10px;
-    margin: 5px 0 5px 0;
-    border: solid 1px var(--color-background);
-    border-radius: 5px;
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
-    text-decoration: none;
-    list-style: none;
+    display:none !important;
 }
